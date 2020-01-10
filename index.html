@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Show more - Show less Accordion</title>
+	<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+	<link rel="stylesheet" href="styles.css">
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".toggle_btn").click(function(){
+			   $(this).toggleClass("active");
+			  $(".wrapper ul").toggleClass("active");
+			  
+			  if($(".toggle_btn").hasClass("active")){
+			    $(".toggle_text").text("Show Less");
+			  }
+			  else{
+			    $(".toggle_text").text("Show More");
+			  }
+			});
+		});
+	</script>
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="title">Show More - Show Less Accordion</div>
+    <ul>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+        <li>Lorem ipsum dolor sit.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, ex?</li>
+        <li>Lorem, ipsum.</li>  
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+        <li>Lorem ipsum dolor sit.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, ex?</li>
+        <li>Lorem, ipsum.</li>  
+    </ul>
+    <div class="toggle_btn">
+        <span class="toggle_text">Show More</span> <span class="arrow">
+      <i class="fas fa-angle-down"></i>
+      </span>   
+    </div>
+</div>
+
+</body>
+</html>
